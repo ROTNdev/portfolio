@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>Circular Count Down Demo - Nikhil Navadiya</title>
+	<meta name="description" content="jQuery Circular CountDown Demo">
+	<meta name="keywords" content="Nikhil Navadiya, Circular Countdown, Countdown, jQuery, javascript, css">
+	<link rel="alternate" type="application/rss+xml" href="http://blog.nikhilnavadiya.in/rss">
+	<!-- STYLESHEETS : begin -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/icomonn.css">
+	<!-- STYLESHEETS : end -->
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+    <script src="js/jquery.knob.js"></script>
+	<script src="js/jquery.ccountdown.js"></script>
+	<script src="js/init.js"></script>
+    
+	</head>
+	<body class=" indexpage">
+		<div id="top" class="container">
+			<div id="wrapper">
+				<!-- HEADER : begin -->
+				<header>
+                    <center><h1>Shotbow Network Proxy Reboot Timer</h1>
+                    <i><h2>Because why not?</h2></i>
+                    <h4>(Hours : Minutes : Seconds)</h4>
+				</header>
+				<div class="core">
+					<center>
+                    <div class="ccounter">
+						<input class="knob hour" data-width="160" data-min="0" data-max="24" data-displayPrevious=true data-fgColor="#ff003c" data-readOnly="true" value="1">
+						<input class="knob minute" data-width="160" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ff003c" data-readOnly="true" value="1">
+						<input class="knob second" data-width="160" data-min="0" data-max="60" data-displayPrevious=true data-fgColor="#ff003c" data-readOnly="true" value="0" data-bgcolor="#eee">
+					</div>
+                    </center>
+				</div>
+            <script>
+			//enter the count down date using the format year, month, day, time:time
+            
+            var now = new Date();
+            var curr_hour = now.getHours();
+            
+            var day = now.getDate();
+            var hour = now.getHours();
+            
+            if (curr_hour < 11 || curr_hour > 22) {
+                 if (curr_hour > 22) {
+                    var future = new Date("Dec 13 2013 21:00:00 UTC+1030");
+                    hour = 11;
+                    day = day + 1;
+                } else {
+                    var future = new Date("Dec 13 2013 11:00:00 UTC+1030");
+                    hour = 11;
+                }
+            } else {
+                var future = new Date("Dec 13 2013 21:00:00 UTC+1030");
+                hour = 23;
+            }
+            
+            $(".ccounter").ccountdown(2013,now.getMonth() + 1,day,'' + hour + ':01');
+		</script>
+    
+		
+		<!-- GOOGLE WEB FONTS : begin -->
+		<script type="text/javascript">
+			var primary_font_code = 'Sintony:400,700:latin,latin-ext';
+			var secondary_font_code = 'Bree+Serif::latin,latin-ext';
+			var web_fonts = [primary_font_code];
+			if(secondary_font_code != ''){
+			    web_fonts.push(secondary_font_code);
+			}
+			
+			WebFontConfig = {
+			    google: { families: web_fonts }
+			};
+			(function() {
+			    var wf = document.createElement('script');
+			    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+			    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+			    wf.type = 'text/javascript';
+			    wf.async = 'true';
+			    var s = document.getElementsByTagName('script')[0];
+			    s.parentNode.insertBefore(wf, s);
+			})();
+			
+		</script>
+		<!-- GOOGLE WEB FONTS : end -->
+        
+        <center><h6>Warning: This is probably buggy. I recommend refreshing every so often. Once the timer hits 0, that's it. You need to refresh.</h6>Made by <a target="_blank" href="https://www.github.com/stuntguy3000">stuntguy3000</a>. 
+        <a target="_blank" href="https://www.github.com/stuntguy3000/stuntguy3000.github.io">View this application on Github</a>.</center><br>
+	</body>
+</html>
