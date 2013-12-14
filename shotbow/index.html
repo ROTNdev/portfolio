@@ -44,19 +44,20 @@
             var day = now.getDate();
             var hour = now.getHours();
             
-            if (curr_hour < 11 || curr_hour > 22) {
-                 if (curr_hour > 22) {
-                    var future = new Date("Dec 13 2013 21:00:00 UTC+1030");
-                    hour = 11;
+            if (curr_hour < 9 || curr_hour > 20) {
+                if (curr_hour > 20) {                    
+                    var future = new Date("Dec 13 2013 19:00:00 UTC+1030");
+                    hour = 9;
                     day = day + 1;
                 } else {
-                    var future = new Date("Dec 13 2013 11:00:00 UTC+1030");
-                    hour = 11;
+                    var future = new Date("Dec 13 2013 9:00:00 UTC+1030");
+                    hour = 9;
                 }
             } else {
                 var future = new Date("Dec 13 2013 21:00:00 UTC+1030");
-                hour = 23;
+                hour = 21;
             }
+
             
             $(".ccounter").ccountdown(2013,now.getMonth() + 1,day,'' + hour + ':01');
 		</script>
