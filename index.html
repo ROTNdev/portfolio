@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>stuntguy3000's Portfolio</title>
+    <link rel="stylesheet" href="stylesheets/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style>
+        body {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: #fff;
+            background-image: url(images/back.jpeg);
+            background-attachment: fixed;
+            background-position: right top;
+        }
+        .wrapper {
+            background-image: url(images/nav-bg.gif);
+            background-attachment: fixed;
+            opacity: 0.9;
+            border-radius: 15px;
+        }
+        .yellow {
+            color: #ffcc00;
+        }
+        li {
+            color: #ffcc00;
+        }
+        .client_url {
+            font-size:50%;
+        }
+    </style>
+    <script>
+        function toggle(id) {
+            if ($('#' + id).is(":visible")) {
+                $('#' + id + "_button").removeClass().addClass('fa fa-caret-right');
+            } else {
+                $('#' + id + "_button").removeClass().addClass('fa fa-caret-down');
+            }
+            $('#' + id).slideToggle("slow");
+        }
+    </script>
+</head>
+<body>
+<div class="wrapper">
+    <section>
+        <div id="title">
+            <h1 class="yellow">stuntguy3000's Portfolio</h1>
+            <p>Hello! Welcome to my Portfolio.</p>
+        </div>
+        <h1><strong>Programming Background</strong></h1>
+        <p>I have been an enthusiastic programmer and gamer for six years running (Since I was about ten). I have always been fascinated with Technology and all things related.</p>
+        <p>For the past three or so years, I have focused heavily on PHP, and within the past fifteen months I have learnt Java, and now focus on creating Minecraft Server Minigames/Plugins (with the Bukkit API).</p>
+        <br>
+        <h1><strong>Skill Set</strong></h1>
+        <ul>
+            <li>Linux (Centos preferably) SSH Administration</li>
+            <li>BungeeCord Setup/Interaction</li>
+            <li>Advanced Bukkit Plugin Development</li>
+            <li>MySQL Integration (with Plugins)/Management</li>
+            <li>Knowledge of git repository management/usage</li>
+            <li>Basic Maven knowledge</li>
+            <li>Continuous integration (Jenkins) Setup/usage</li>
+            <li>Apache Management</li>
+        </ul>
+        <br>
+        <h1><strong>Featured Projects</strong><span class="client_url"> (Click on <i class="fa fa-caret-right"></i> to expand)</span></h1>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_ipnk');" id="project_ipnk_button"></i> ImpulseNetwork</h2>
+        <div id="project_ipnk" style="overflow: hidden; display: none;">
+            <p>Three months ago, I took upon the challenge of building a Network, from scratch. I was brought in as Developer, by two YouTuber’s (PixelSwift/SubZeroExtabyte - Two of the three founders). My goal/aim was to build a network, on a dedicated machine, that had Bungee integration and 4 unique game modes. This goal was achieved with a great level success.</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_mctheship');" id="project_mctheship_button"></i> MCTheShip</h2>
+        <div id="project_mctheship" style="overflow: hidden; display: none;">
+            <p>Almost a year ago, when I wanted to develop a Minigame server, like Trouble in Mineville. I learnt of the game “The Ship” and wanted to recreate it in Minecraft. At this time, I was very ambitious and really didn’t know a lot about java.</p>
+            <p>MCTheShip was open for 4 months, and did attract some attention. From the players that did play on the server, they really enjoyed it. I managed to create a complete working replica, however it is a shame I had to close down the server.</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_prisonmc');" id="project_prisonmc_button"></i> PrisonMC</h2>
+        <div id="project_prisonmc" style="overflow: hidden; display: none;">
+            <p>PrisonMC was a few months after MCTheShip. A friend of mine wanted to create a prison server, and he wanted my help. Simply, the task was to create a custom prison plugin, which controls everything (Mine Resets, Guard Features, and Ranking systems etc.). My friend didn’t want to use generic plugins, rather one plugin from me that game the same feel throughout the entire server. The server shut down a few months later due to lack of funds; however my Plugin was completed and fulfilled its duties.</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_mcpluginsdev');" id="project_mcpluginsdev_button"></i> MCPluginsDev <a target="_blank" href="http://mcpluginsdev.com" class="client_url">(Website)</a></h2>
+        <div id="project_mcpluginsdev" style="overflow: hidden; display: none;">
+            <p>MCPluginsDev is a new plugin development group, where paying clients can request a plugin and a developer can for-fill the job and create the plugin. We have around 15 clients per month and increasing.</p>
+        </div>
+        <br>
+        <h1><strong>Featured Clients</strong><span class="client_url"> (Click on <i class="fa fa-caret-right"></i> to expand)</span></h1>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_skyservers');" id="project_skyservers_button"></i> SkyServers <a target="_blank" href="http://skyservers.net" class="client_url">(Website)</a></h2>
+        <div id="project_skyservers" style="overflow: hidden; display: none;">
+            <h3><strong>FreezeTag</strong></h3>
+            <p>FreezeTag is a simple replica of the childhood game of "Freeze" or "Stuck in the Mud". Essentially, the tagger has to tag all players to win. When a player is tagged, they cannot move. When they are not tagged, they can untag tagged players.</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_strayyaprison');" id="project_strayyaprison_button"></i> StrayyaPrison</h2>
+        <div id="project_strayyaprison" style="overflow: hidden; display: none;">
+            <p>StrayyaPrison were after a single plugin which controled every element of their prison server. StrayyaPrison's plugin was created and provided satisfaction for the clients who ran a successful and unique prison server. This was built before PrisonMC, and provided elements for PrisonMC's custom plugin.</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_lavacraft');" id="project_lavacraft_button"></i> LavaCraft <a target="_blank" href="http://mclava.com/" class="client_url">(Website)</a></h2>
+        <div id="project_lavacraft" style="overflow: hidden; display: none;">
+            <h3><strong>LavaTab</strong></h3>
+            <p>A custom plugin that changes who is shown where on the TAB list, with full permission rank support.</p>
+            <h3><strong>LavaVoteReminder</strong></h3>
+            <p>Simple plugin, reminds users at a configurable time with a configurable message who haven’t voted within the past 24 hours.</p>
+            <h3><strong>Capture The Flag</strong></h3>
+            <p>Capture The Flag is a fast paced game mode where two teams have to battle it out to retrieve the other teams Flag, and take it to their base. This scores a point. You need three points to win.</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_minevision');" id="project_minevision_button"></i> MineVision <a target="_blank" href="http://minevision.us/" class="client_url">(Website)</a></h2>
+        <div id="project_minevision" style="overflow: hidden; display: none;">
+            <h3><strong>Sumotori</strong></h3>
+            <p>Sumoroti is a replica of the Japanese sport Sumo. Essentially, player battle it out with a stick (with added knock back) and the last team standing, wins!</p>
+        </div>
+        <h2><i class="fa fa-caret-right" onclick="toggle('project_legendaryprison');" id="project_legendaryprison_button"></i> LegendaryPrison</h2>
+        <div id="project_legendaryprison" style="overflow: hidden; display: none;">
+            <p>I was hired at LegendaryPrision for a short amount of time (I quit due to personal reasons that occurred). I did various tasks such as light plugin/web management, and as well as making sure the server was functioning properly.</p>
+        </div>
+    </section>
+</div>
+<!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+</body>
+</html>
